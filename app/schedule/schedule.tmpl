@@ -1,0 +1,4 @@
+<div ng-repeat="category in categories.schedule.subCategories">
+  <a ui-sref="{{'schedule.'+category.name}}">{{category.name}}</a>
+</div>
+<div ui-view></div>
