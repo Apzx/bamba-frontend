@@ -1,12 +1,33 @@
 # bamba-frontend
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+## 0.0 Install Development Tools
 
-## Build & development
+#### The latest versions of the following tools are required to build and compile the project.
+* Ruby
+* Node
+* Compass
 
-Run `grunt` for building and `grunt serve` for preview.
+### 0.1 Install yo and other tools
+```
+npm install -g yo bower grunt-cli
+gem install compass
+```
 
-## Testing
+## 1.0 Setup Project Scaffolding
 
-Running `grunt test` will run the unit tests with karma.
+### 1.1 Install angular generator
+```
+npm install -g generator-angular
+```
+
+## 2.0 Install / Update dependencies and modules
+
+```
+npm install
+bower install
+```
+
+## 3.0 Start Grunt Server
+```
+grunt serve
+```
