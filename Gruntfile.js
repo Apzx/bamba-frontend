@@ -124,13 +124,18 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           dot: true,
-          src: [
-            '.tmp',
-            'dist/**/*'
-          ]
+          src: 'dist/**/*'
         }]
       },
-      server: '.tmp'
+      server: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '.sass-cache'
+          ]
+        }]
+      }
     },
 
     // Add vendor prefixed styles
@@ -356,6 +361,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'clean:server',
     'jshint',
     'wiredep',
     'useminPrepare',
@@ -368,9 +374,9 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'clean:server'
   ]);
 
   grunt.registerTask('default', 'Compile then start a connect web server', function () {
